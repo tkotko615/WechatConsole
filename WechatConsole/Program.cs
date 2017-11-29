@@ -56,7 +56,7 @@ namespace WechatConsole
         public static string ReadIniValues(string section, string key)
         {
             string iniPath = System.IO.Path.GetDirectoryName(System.Windows.Forms.Application.ExecutablePath) + "\\Setting.ini";
-            System.Text.StringBuilder sb = new System.Text.StringBuilder(22000);
+            StringBuilder sb = new StringBuilder(22000);
             int i = GetPrivateProfileString(section, key, "Not Found", sb, 22000, iniPath);
             return sb.ToString();
         }
