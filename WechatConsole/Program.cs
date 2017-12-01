@@ -14,7 +14,7 @@ namespace WechatConsole
         static void Main(string[] args)
         {
             ConfigSet();
-            wechatAPI = "http://exweb.acesconn.com/wechatapi/api/values";
+            //wechatAPI = "http://exweb.acesconn.com/wechatapi/api/values";
             SentMsg().Wait();
         }
 
@@ -61,7 +61,7 @@ namespace WechatConsole
             return sb.ToString();
         }
         [System.Runtime.InteropServices.DllImport("kernel32")]
-        private static extern int GetPrivateProfileString(string section, string key, string def, System.Text.StringBuilder retVal, int size, string filePath);
+        private static extern int GetPrivateProfileString(string section, string key, string def, StringBuilder retVal, int size, string filePath);
     }
 
 }
